@@ -1,0 +1,130 @@
+.box1
+  .titlearea
+    %h1
+      Cloud-based Building Operations
+    %p
+      Putting your hands on what you need, now.
+  .orbit_container
+    %ul.main-orbit{"data-orbit" => ""}
+      %li
+        = image_tag 'bimvid.png'
+        .orbit-caption
+          Caption One.
+      %li.active
+        %img{alt: "slide 2", src: "../assets/img/examples/andromeda-orbit.jpg"}/
+        .orbit-caption
+          Caption Two.
+      %li
+        %img{alt: "slide 3", src: "../assets/img/examples/launch-orbit.jpg"}/
+        .orbit-caption
+          Caption Three.
+
+.box2#what
+  .header_text
+    %h1
+      Vcfm
+      %span
+        What is it?
+  .left_content
+    %p
+      Vcfm is a cloud-based subscription service designed to revolutionize how facility managers operate and maintain their buildings.
+    %ul
+      %li
+        Instant access to each asset's real-time operating conditions
+      %li
+        Instant access on mobile devices
+      %li
+        Instant access from anywhere globally
+      %li
+        Instant visualization, utilizing BIM, Lazer, or filmed virtual
+    %h4
+      Product Features Include
+    %ul
+      %li
+        Instant access to archived and real-time building information
+      %li
+        Powerful asset management tools
+      %li
+        Simple and intuitive interfaces
+      %li
+        COBie compatibility
+      %li
+        Seamless scalability
+  .right_content
+    = link_to (image_tag 'video1.png'), "#myModal", "data-reveal-id" => 'myModal'
+
+.box3#how
+  .header_text
+    %h1
+      How Vcfm works
+  .left_content
+    %p
+      In an operating  Data Center or healthcare facility, Systems operating correctly and efficiently are imperative, any malfunction or failure can have serious financial impacts. Using Vcfm, with its real time asset management functions, facility managers operative systems with real time performance and analysis on all critical systems and assets.
+    %p
+      When standing in the building, in a stationary position, the user can tilt the iPad over his/her head, and see what is above the ceiling.
+      When the user is in a location adjacent to or very near an asset (such as an air handler), a hotspot indicator will guide the user to extended information. If the user clicks on the hotspot, a separate tab or window will open and render the next step of information. The next step could be one or all of the following:
+    %ul
+      %li
+        Still picture or Lazer driven video of the asset
+      %li
+        Nameplate picture or information of the asset
+      %li
+        Live BMS data
+      %li
+        Design data for that device
+    %p
+      In the case of a building that was designed and built using a Building Information Model (BIM), this would be a 3-D BIM representation. BIM data is imported into the iPad, and the user is immersed in a simulated reality experience, enabling them to ‘see’ behind walls, to experience the ductwork, conduit, plumbing and other features that are normally not visible once ceilings, walls and finishes are installed.
+
+  .right_content
+    .img1
+      = image_tag 'bim.png'
+    .img2
+      = link_to (image_tag 'bimvid.png'), "#myModal2", "data-reveal-id" => 'myModal2'
+
+.box4#rec
+  .header_text
+    %h1
+      You're in good company
+  .left_content
+    = image_tag 'logos.png'
+  .right_content
+    %ul.testimonial_slider#testimonial_containerr{"data-orbit" => "", "data-options" => "slide_number: false; pause_on_hover: false; navigation_arrows: false; timer_speed: 5500"}
+      %li{"data-orbit-slide" => "headline-1"}
+        %div
+          %h3 Vcfm is amazing… it will make maintenance so much easier.
+          %p
+            Director of Facilities, Intuit
+      %li{"data-orbit-slide" => "headline-2"}
+        %div
+          %h3 Vcfm is exactly what we need in our own offices in Sacramento. And the Department of General Services needs it, too.
+          %p
+            Chester A. Widom, FAIA – California State Architect
+      %li{"data-orbit-slide" => "headline-3"}
+        %div
+          %h3 We want to deploy Vcfm in our worldwide facilities. It is exactly what we need in our ‘Follow-the-Sun’ strategy which we are deploying over the next five years.
+          %p
+            Director of Facilities, NASA/JPL
+
+.box5#contact
+  .header_text
+    %h1
+      Contact Us
+  .content_container
+    .content
+    = simple_form_for :contact, html: {:id => "contactus"} do |f|
+      = f.input :first_name, required: false, label: false, placeholder: 'First Name'
+      = f.input :last_name, required: false, label: false, placeholder: 'Last Name'
+      = f.input :email, label: false, placeholder: 'Email'
+      = f.input :message, as: 'text', label: false, placeholder: 'Message'
+      = f.button :button, 'Contact Us'
+
+
+#myModal.reveal-modal{"data-reveal" => ""}
+  %h2 Introductory Video
+  = video_tag(["Virtual Building Browser.mov"], :width => '1000px', :height => '500px', :controls => true)
+  %a.close-reveal-modal &#215;
+
+#myModal2.reveal-modal{"data-reveal" => ""}
+  %h2 Vcfm Animation Demo
+  = video_tag(["JMMC OR animation.mp4"], :width => '1000px', :height => '500px', :controls => true)
+  %a.close-reveal-modal &#215;

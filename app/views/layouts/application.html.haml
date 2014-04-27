@@ -1,0 +1,40 @@
+!!!
+%html{lang: "en"}
+  %head
+    %meta{charset: "utf-8"}/
+    %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
+    %title= content_for?(:title) ? yield(:title) : "foundation-rails"
+    = stylesheet_link_tag    "application"
+    = javascript_include_tag "vendor/modernizr"
+    = csrf_meta_tags
+  %body
+    .fixed
+      %nav.top-bar{"data-topbar" => ""}
+        %ul.title-area
+          %li.name{:id => 'home'}
+            %h1
+              %a{href: "#home"} VCFM
+          %li.toggle-topbar.menu-icon
+            %a{href: "#"} Menu
+        %section.top-bar-section
+          / Right Nav Section
+          %ul.right
+            %li{:id => 'what'}
+              %a{href: "#what"}What is Vcfm
+            %li{:id => 'how'}
+              %a{href: "#how"}How it works
+            %li{:id => 'rec'}
+              %a{href: "#rec"}Testimonials
+            %li{:id => 'contact'}
+              %a{href: "#contact"}Contact Us
+            -# %li.has-dropdown
+            -#   %a{href: "#"} Right Button Dropdown
+            -#   %ul.dropdown
+            -#     %li
+            -#       %a{href: "#"} First link in dropdown
+          / Left Nav Section
+          -# %ul.left
+          -#   %li
+          -#     %a{href: "#"} Left Nav Button
+    = yield
+    = javascript_include_tag "application"
