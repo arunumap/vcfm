@@ -108,7 +108,7 @@
       Contact Us
   .content_container
     .content
-    = simple_form_for :contact, html: {:id => "contactus"} do |f|
+    = simple_form_for :contact, url: contact_path, method: 'get', html: {:id => "contactus"} do |f|
       = f.input :first_name, required: false, label: false, placeholder: 'First Name'
       = f.input :last_name, required: false, label: false, placeholder: 'Last Name'
       = f.input :email, label: false, placeholder: 'Email'

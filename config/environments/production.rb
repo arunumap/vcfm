@@ -77,4 +77,13 @@ Vcfm::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  ActionMailer::Base.smtp_settings = {
+    :address => 'smtp.mandrillapp.com',
+    :port => 587,
+    :user_name => 'arunumap@gmail.com',
+    :password => 'vQvhZhiFBEkKnL2GZZxx_g',
+    :authentication => :plain,
+    :domain => 'ebuildingbrowser.com'
+  }
 end

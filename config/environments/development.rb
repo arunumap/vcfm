@@ -14,7 +14,7 @@ Vcfm::Application.configure do
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
@@ -26,4 +26,13 @@ Vcfm::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  ActionMailer::Base.smtp_settings = {
+    :address => 'smtp.mandrillapp.com',
+    :port => 587,
+    :user_name => 'arunumap@gmail.com',
+    :password => 'vQvhZhiFBEkKnL2GZZxx_g',
+    :authentication => :plain,
+    :domain => 'ebuildingbrowser.com'
+  }
 end
