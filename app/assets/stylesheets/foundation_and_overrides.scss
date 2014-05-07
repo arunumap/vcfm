@@ -1018,27 +1018,31 @@ html, body{
     color: #ffffff;
     font-size: 1.4em
   }
-
-  .orbit_container{
-    position: relative;
+  .orbit_box_container{
+    padding-top: 235px;
     width: 800px;
-    height: 600px;
-    .orbit-container{
-      position: absolute;
-      top: 231px;
-      height: 600px;
-      width: 750px;
-      left: 334px;
-      img{
-        width: 734px;
-        height: 556px;
-      }
-    }
-    ul.main-orbit{
-      position: absolute;
+    margin: 0 auto;
+    .orbit_container{
+      position: relative;
       width: 800px;
       height: 600px;
-      top: 22px;
+      .orbit-container{
+        position: absolute;
+        top: 0;
+        height: 600px;
+        width: 780px;
+        left: 0;
+        img{
+          width: 734px;
+          height: 556px;
+        }
+      }
+      ul.main-orbit{
+        position: absolute;
+        width: 800px;
+        height: 600px;
+        top: 22px;
+      }
     }
   }
 }
