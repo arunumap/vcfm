@@ -7,17 +7,14 @@
   .orbit_container
     %ul.main-orbit{"data-orbit" => ""}
       %li
-        = image_tag 'bimvid.png'
+        <iframe width="738" height="556" src="//www.youtube.com/embed/b8ASlt0NETM" frameborder="0" allowfullscreen></iframe>
         .orbit-caption
-          Caption One.
+          E Building Browser Video
       %li.active
-        %img{alt: "slide 2", src: "../assets/img/examples/andromeda-orbit.jpg"}/
+        <iframe width="740" height="556" src="//www.youtube.com/embed/4y3qINvFxz8" frameborder="0" allowfullscreen></iframe>
         .orbit-caption
-          Caption Two.
-      %li
-        %img{alt: "slide 3", src: "../assets/img/examples/launch-orbit.jpg"}/
-        .orbit-caption
-          Caption Three.
+          Simulation
+
 
 .box2#what
   .header_text
@@ -121,10 +118,10 @@
 
 #myModal.reveal-modal{"data-reveal" => ""}
   %h2 Introductory Video
-  = video_tag(["Virtual Building Browser.mov"], :width => '1000px', :height => '500px', :controls => true)
+  <iframe width="1000" height="500" src="//www.youtube.com/embed/b8ASlt0NETM" frameborder="0" allowfullscreen></iframe>
   %a.close-reveal-modal &#215;
 
 #myModal2.reveal-modal{"data-reveal" => ""}
   %h2 Vcfm Animation Demo
-  = video_tag(["JMMC OR animation.mp4"], :width => '1000px', :height => '500px', :controls => true)
+  <iframe width="1000" height="500" src="//www.youtube.com/embed/4y3qINvFxz8" frameborder="0" allowfullscreen></iframe>
   %a.close-reveal-modal &#215;
